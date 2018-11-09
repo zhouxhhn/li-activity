@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.siyueli.platform.activity.service.mapper.MemberUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.siyueli.platform.activity.common.entity.member.MemberUser">
+        <id column="id" property="id" />
+        <result column="code" property="code" />
+        <result column="name" property="name" />
+        <result column="cellphone" property="cellphone" />
+        <result column="grade_id" property="gradeId" />
+        <result column="create_at" property="createAt" />
+        <result column="register_channel" property="registerChannel" />
+        <result column="unnit_id" property="unnitId" />
+        <result column="car_num" property="carNum" />
+        <result column="birthday" property="birthday" />
+        <result column="password" property="password" />
+        <result column="status" property="status" />
+        <result column="identity_id" property="identityId" />
+        <result column="email" property="email" />
+        <result column="balance" property="balance" />
+        <result column="donate_balance" property="donateBalance" />
+        <result column="deposite" property="deposite" />
+        <result column="points" property="points" />
+        <result column="update_at" property="updateAt" />
+    </resultMap>
+
+</mapper>

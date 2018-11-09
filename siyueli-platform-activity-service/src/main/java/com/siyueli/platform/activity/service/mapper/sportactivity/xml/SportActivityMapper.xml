@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.siyueli.platform.activity.service.mapper.sportactivity.SportActivityMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.siyueli.platform.activity.common.entity.sportactivity.SportActivity">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="begin_time" property="beginTime" />
+        <result column="end_time" property="endTime" />
+        <result column="site" property="site" />
+        <result column="address" property="address" />
+        <result column="sponsor" property="sponsor" />
+        <result column="category_id" property="categoryId" />
+        <result column="is_public" property="isPublic" />
+        <result column="poster_image_id" property="posterImageId" />
+        <result column="poster_image_url" property="posterImageUrl" />
+        <result column="activity_detail" property="activityDetail" />
+        <result column="share_title" property="shareTitle" />
+        <result column="share_description" property="shareDescription" />
+        <result column="share_image_id" property="shareImageId" />
+        <result column="share_image_url" property="shareImageUrl" />
+        <result column="quantity_limit" property="quantityLimit" />
+        <result column="quantity" property="quantity" />
+        <result column="subject" property="subject" />
+        <result column="team_qty_limit" property="teamQtyLimit" />
+        <result column="team_qty_min" property="teamQtyMin" />
+        <result column="team_qty_max" property="teamQtyMax" />
+        <result column="fee_flag" property="feeFlag" />
+        <result column="fee" property="fee" />
+        <result column="refund_flag" property="refundFlag" />
+        <result column="audit_flag" property="auditFlag" />
+        <result column="form_id" property="formId" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="create_at" property="createAt" />
+        <result column="update_at" property="updateAt" />
+    </resultMap>
+
+    <resultMap id="searchResultMap" extends="BaseResultMap" type="com.siyueli.platform.activity.common.response.sportactivity.SportActivityVo">
+        <result column="category_name" property="categoryName" />
+    </resultMap>
+
+    <select id="search" resultMap="searchResultMap">
+      SELECT sa.*,sac.name AS category_name FROM sport_activity sa
+      JOIN sport_activity_category sac ON sa.category_id = sac.id
+    </select>
+
+</mapper>

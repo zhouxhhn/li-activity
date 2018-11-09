@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.siyueli.platform.activity.service.mapper.sportactivity.SportActivityRefundOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.siyueli.platform.activity.common.entity.sportactivity.SportActivityRefundOrder">
+        <id column="id" property="id" />
+        <result column="order_id" property="orderId" />
+        <result column="refund_order_no" property="refundOrderNo" />
+        <result column="signup_id" property="signupId" />
+        <result column="refund_amount" property="refundAmount" />
+        <result column="status" property="status" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="create_at" property="createAt" />
+        <result column="update_at" property="updateAt" />
+    </resultMap>
+
+</mapper>

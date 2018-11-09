@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.siyueli.platform.activity.service.mapper.sportactivity.SportActivityOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.siyueli.platform.activity.common.entity.sportactivity.SportActivityOrder">
+        <id column="id" property="id" />
+        <result column="order_no" property="orderNo" />
+        <result column="signup_id" property="signupId" />
+        <result column="amount" property="amount" />
+        <result column="paid_amount" property="paidAmount" />
+        <result column="status" property="status" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="create_at" property="createAt" />
+        <result column="update_at" property="updateAt" />
+    </resultMap>
+
+</mapper>
